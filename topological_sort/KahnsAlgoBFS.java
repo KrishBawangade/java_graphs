@@ -36,7 +36,8 @@ public class KahnsAlgoBFS {
             res.add(node);
         }
         
-        return res;
+        // return empty list if the cycle is detected
+        return res.size()!=adj.size()? new ArrayList<>(): res;
     }
 
     public static void main(String[] args){
